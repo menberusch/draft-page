@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	
+	<title>Simple page.</title>
+
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Krona+One" rel="stylesheet">
+	<link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+	
+	<!-- STYLES -->
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+
+</head>
+<body>
+	
+	<div class="main-wraper">
+
+		<div class="main-area">
+			
+			<header>
+			
+				<div class="container d-flex justify-content-between">
+					
+					<div id="logo"><img src="images/logo.png" alt="See you space cowboy.."></div>
+					
+					<nav class="d-flex align-items-center nav-menu">
+					
+						<ul class="hide d-flex">
+					
+							<li><a href="#">home</a></li>
+					
+							<li><a onclick="openCart()" href="#">targets</a></li>
+					
+							<li><a href="#">our team</a></li>
+					
+						</ul>
+					
+						<button onclick="toggleMenu(this)" class="menu-button"><i class="fas fa-bars"></i><i class="fas fa-times"></i></button>
+					
+					</nav>
+			
+				</div>
+			
+			</header>
+
+			<div class="main-title">
+
+				<div class="container">
+
+					<h2>I'm watching a dream I'll never wake up from.</h2>
+
+					<a class="primary-button d-inline-flex align-items-center" href="#">bang <img src="images/bang-icon.png" alt="bang"></a>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<section class="featured-area">
+				
+				<div class="container">
+
+					<div class="row">
+
+						<div class="col-4 featured-items">
+
+							<div class="featured-items-title">
+								<img src="images/fast.png" alt="Fast">
+								<h2>Fast</h2>
+							</div>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, doloremque laborum temporibus error sed odio aliquid unde explicabo dolorem quas!</p>
+
+						</div>
+
+						<div class="col-4 featured-items">
+
+							<div class="featured-items-title">
+								<img src="images/idea.png" alt="Smart">
+								<h2>Smart</h2>
+							</div>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, doloremque laborum temporibus error sed odio aliquid unde explicabo dolorem quas!</p>
+						
+						</div>
+						
+						<div class="col-4 featured-items">
+
+							<div class="featured-items-title">
+								<img src="images/target.png" alt="To the end">
+								<h2>Target</h2>
+							</div>
+					
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, doloremque laborum temporibus error sed odio aliquid unde explicabo dolorem quas!</p>
+						
+						</div>
+				
+					</div>
+
+				</div>
+
+		</section>
+
+		<section class="products_area">
+			<div class="container d-flex justify-content-between flex-wrap">
+				<div class="products">
+					<div>
+						<img src="https://picsum.photos/400?image=1" alt="product 1">
+					</div>
+					<p>Lorem ipsum dolor 1.</p>
+					<div>
+						<a href="#">ADD TO CART</a>
+						<span class="price">100$</span>
+					</div>
+				</div>
+				<div class="products">
+					<div>
+						<img src="https://picsum.photos/400?image=2" alt="product 2">
+					</div>
+					<p>Lorem ipsum dolor 2.</p>
+					<div>
+						<a href="#">ADD TO CART</a>
+						<span class="price">100$</span>
+					</div>
+				</div>
+				<div class="products">
+					<div>
+						<img src="https://picsum.photos/400?image=3" alt="product 3">
+					</div>
+					<p>Lorem ipsum dolor 3.</p>
+					<div>
+						<a href="#">ADD TO CART</a>
+						<span class="price">200$</span>
+					</div>
+				</div>
+
+				<div class="products">
+					
+					<div>
+						<img src="https://picsum.photos/400?image=4" alt="product 4">
+					</div>
+
+					<p>Lorem ipsum dolor 4.</p>
+
+					<div>
+
+						<a href="#">ADD TO CART</a>
+						<span class="price">300$</span>
+
+					</div>
+
+				</div>
+
+				<div class="products">
+
+					<div>
+						<img src="https://picsum.photos/400?image=5" alt="product 5">
+					</div>
+
+					<p>Lorem ipsum dolor.</p>
+
+					<div>
+						<a href="#">ADD TO CART</a>
+						<span class="price">400$</span>
+					</div>
+
+				</div>
+
+			</div>
+		</section>
+
+	</div>
+
+	<div id="cart">
+		<table>
+			<tr>
+				<th colspan="2">Product</th>
+				<th>Quantity</th>
+				<th>Price</th>
+				<th onclick="closeCart()">&#x2715;</th>
+			</tr>
+			<tr>
+				<td colspan="5"></td>
+			</tr>
+			<!-- <tr class="cart_products">
+				<td><img src="images/cart_product_test.jpg" alt="test"></td>
+				<td>Dr. Martens Canada</td>
+				<td><input type="number" name="quantity" min="1" max="5"></td>
+				<td class="price">200$</td>
+				<td><button class="delete">&#x2715;</button></td>
+			</tr> -->
+
+			<tr class="total">
+				<td colspan="3">Total Price</td>
+				<td colspan="2"><span class="total_price">0</span> $</td>
+			</tr>
+			<tr>
+				<td colspan="2">Apply Discount Code</td>
+				<td><input type="text"></td>
+				<td>Add to Cart</td>
+				<td><button class="checkout">Checkout</button></td>
+			</tr>
+		</table>
+	</div>
+
+	<!--==================================================== JQuery, Tether, BOOTSTRAP 4 ====================================================-->
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script src="simple_script.js"></script>
+</body>
+</html>
